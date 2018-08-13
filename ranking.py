@@ -1,8 +1,9 @@
 import torch.nn as nn
 import torch
 
-class SimpleFactorRanker:
+class SimpleFactorRanker(nn.Module):
     def __init__(self, num_items, num_users, num_latent_factors):
+        super(SimpleFactorRanker, self).__init__()
         self.num_items = num_items
         self.num_users = num_users
         self.num_latent_factors = num_latent_factors
