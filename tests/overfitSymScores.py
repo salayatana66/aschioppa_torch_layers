@@ -46,8 +46,8 @@ if __name__ == "__main__":
     mySampler = SNU(myNegSize)
     myProd = SFR(num_items,num_users,num_latent)
     lossFun = torch.nn.MSELoss()
-    optimizer = torch.optim.SGD(myProd.parameters(), lr=1e-2)
-    optimizer = torch.optim.Adam(myProd.parameters(), lr=1e-2,weight_decay=.001)
+    optimizer = torch.optim.SGD(myProd.parameters(), lr=1e-3)
+    optimizer = torch.optim.Adam(myProd.parameters(), lr=1e-2)
     for iteration in range(1000):
         aggLoss = 0
         numExa = 0
